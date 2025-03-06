@@ -1,9 +1,9 @@
 /* Import de la police Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* :root pour définir des variables globales */
+/* Variables globales */
 :root {
-  --main-bg: #0056b3;       /* Couleur principale (barre latérale, header) */
+  --main-bg: #0056b3;       /* Couleur principale (sidebar, header) */
   --accent-color: #ff8c00;  /* Couleur d'accent (titres, liens hover, etc.) */
   --light-bg: #f8f9fa;      /* Couleur de fond globale */
   --white: #ffffff;         /* Blanc */
@@ -12,34 +12,37 @@
   --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style global du body */
-body {
-  font-family: 'Roboto', sans-serif;
+/* Réinitialisation et styles de base */
+* {
   margin: 0;
   padding: 0;
-  background-color: var(--light-bg);
-  color: var(--font-color);
-  /* On retire le display: flex; align-items/justify-content
-     pour éviter des soucis de scroll si le contenu est trop long */
+  box-sizing: border-box;
 }
 
-/* Conteneur principal */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
+/* Conteneur principal en deux colonnes */
 .container {
-  width: 90%;
-  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
   margin: 40px auto;
   background: var(--white);
   padding: 20px;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: row;
   gap: 20px;
 }
 
-/* Barre latérale (sidebar) */
+/* Barre latérale (Sidebar) */
 .sidebar {
-  width: 30%;
+  flex: 1;
+  min-width: 280px;
   background: var(--main-bg);
   color: var(--white);
   padding: 20px;
@@ -48,63 +51,52 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: sticky;
+  top: 0;
+  align-self: stretch;
+  min-height: 100vh;
 }
 
-.sidebar li {
-  text-align: justify;
-}
-
-/* Nom / titre dans la sidebar */
-.name {
-  text-align: center;
+.sidebar .name {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
   color: var(--accent-color);
-}
-
-/* Contenu principal */
-.main-content {
-  width: 70%;
-  padding: 20px;
-}
-
-/* En-tête interne (header de la main-content, si besoin) */
-.header {
-  text-align: center;
-  background: var(--main-bg);
-  color: var(--white);
-  padding: 15px;
-  border-radius: var(--border-radius);
-  font-size: 22px;
-}
-
-/* Titres */
-h1, h2, h3 {
-  color: #222;
-  font-weight: 700;
   text-align: center;
 }
 
-/* Titre principal */
-h1.title {
-  font-size: 26px;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
-/* Partie mise en évidence dans le titre */
-h1 .highlight {
-  color: var(--accent-color);
-}
-
-/* Zone de recherche ou autre info dans la sidebar */
-.search-area {
+.sidebar .search-area {
   font-weight: bold;
   background: rgba(255, 255, 255, 0.2);
   padding: 8px 12px;
   border-radius: 5px;
   display: inline-block;
+  margin-bottom: 15px;
+}
+
+.sidebar p,
+.sidebar li {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.sidebar a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Listes dans la sidebar */
+.sidebar ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 /* Bloc compétences */
@@ -127,6 +119,43 @@ h1 .highlight {
   margin: 5px;
   font-weight: bold;
   text-align: center;
+  font-size: 0.8em;
+}
+
+/* Contenu principal */
+.main-content {
+  flex: 2;
+  padding: 20px;
+  min-width: 300px;
+  background: var(--white);
+}
+
+/* En-tête du contenu principal */
+.header {
+  text-align: center;
+  background: var(--main-bg);
+  color: var(--white);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  font-size: 22px;
+}
+
+.header .title {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.header .highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Titres généraux */
+h1, h2, h3 {
+  color: #222;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* Sections */
@@ -138,13 +167,55 @@ h1 .highlight {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Pour aligner le h3 différemment si besoin */
-.section h3 {
-  text-align: justify;
+.section h2 {
+  border-bottom: 2px solid var(--main-bg);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
-.section article {
+.section p,
+.section li {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+/* Titres d'expériences professionnelles optimisés */
+section[aria-labelledby="experience-title"] h3,
+#experiences h3 {
+  background-color: #e6f1fa;
+  border-left: 4px solid var(--main-bg);
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--main-bg);
+  font-size: 1.1em;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+/* Articles pour les expériences */
+article {
   margin-bottom: 20px;
+}
+
+article h3 {
+  margin-bottom: 5px;
+}
+
+article p {
+  margin-bottom: 5px;
+}
+
+article ul {
+  margin-left: 20px;
 }
 
 /* Pied de page */
@@ -173,7 +244,7 @@ a:hover {
 
 /* ---- Media Queries ---- */
 
-/* Écrans jusqu'à 1024px (tablettes, petits laptops) */
+/* Pour écrans jusqu'à 1024px (tablettes, petits laptops) */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -196,7 +267,7 @@ a:hover {
   }
 }
 
-/* Écrans jusqu'à 768px (smartphones, phablets) */
+/* Pour écrans jusqu'à 768px (smartphones, phablets) */
 @media (max-width: 768px) {
   .header {
     font-size: 16px;
@@ -224,5 +295,11 @@ a:hover {
   .footer {
     font-size: 12px;
     padding: 8px;
+  }
+  
+  /* Assurer que le body et html s'étendent correctement pour le scroll */
+  html, body {
+    height: auto;
+    overflow-y: auto;
   }
 }
