@@ -1,199 +1,228 @@
+/* Import de la police Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+/* :root pour définir des variables globales */
+:root {
+  --main-bg: #0056b3;       /* Couleur principale (barre latérale, header) */
+  --accent-color: #ff8c00;  /* Couleur d'accent (titres, liens hover, etc.) */
+  --light-bg: #f8f9fa;      /* Couleur de fond globale */
+  --white: #ffffff;         /* Blanc */
+  --font-color: #333;       /* Couleur de texte par défaut */
+  --border-radius: 8px;     /* Rayon de bordure */
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style global du body */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--font-color);
+  /* On retire le display: flex; align-items/justify-content
+     pour éviter des soucis de scroll si le contenu est trop long */
 }
 
+/* Conteneur principal */
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
+/* Barre latérale (sidebar) */
 .sidebar {
-    width: 30%;
-    background: #0056b3;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 30%;
+  background: var(--main-bg);
+  color: var(--white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .sidebar li {
-    text-align: justify;
+  text-align: justify;
 }
 
+/* Nom / titre dans la sidebar */
 .name {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #ff8c00;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--accent-color);
 }
 
+/* Contenu principal */
 .main-content {
-    width: 70%;
-    padding: 20px;
+  width: 70%;
+  padding: 20px;
 }
 
+/* En-tête interne (header de la main-content, si besoin) */
 .header {
-    text-align: center;
-    background: #0056b3;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 22px;
+  text-align: center;
+  background: var(--main-bg);
+  color: var(--white);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  font-size: 22px;
 }
 
+/* Titres */
 h1, h2, h3 {
-    color: #222;
-    font-weight: 700;
-    text-align: center;
+  color: #222;
+  font-weight: 700;
+  text-align: center;
 }
 
+/* Titre principal */
 h1.title {
-    font-size: 26px;
-    text-transform: uppercase;
-    color: white;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
+/* Partie mise en évidence dans le titre */
 h1 .highlight {
-    color: #ff8c00;
+  color: var(--accent-color);
 }
 
+/* Zone de recherche ou autre info dans la sidebar */
 .search-area {
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 12px;
-    border-radius: 5px;
-    display: inline-block;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
+/* Bloc compétences */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-    justify-content: center;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+  justify-content: center;
+  border-top: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
 }
 
 .skill {
-    background: white;
-    color: #0056b3;
-    padding: 10px 15px;
-    border: 2px solid #0056b3;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
-    text-align: center;
-} 
-
-.section {
-    margin: 20px 0;
-    padding: 15px;
-    background: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  color: var(--main-bg);
+  padding: 10px 15px;
+  border: 2px solid var(--main-bg);
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
 }
+
+/* Sections */
+.section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f0f0f0;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pour aligner le h3 différemment si besoin */
 .section h3 {
-    text-align: justify;
+  text-align: justify;
 }
 
 .section article {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
+/* Pied de page */
 .footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #ff8c00;
-    background: #0056b3;
-    padding: 10px;
-    border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--accent-color);
+  background: var(--main-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
 }
 
+/* Liens */
 a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #ff8c00;
+  text-decoration: underline;
+  color: var(--accent-color);
 }
 
+/* ---- Media Queries ---- */
+
+/* Écrans jusqu'à 1024px (tablettes, petits laptops) */
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        width: 95%;
-        align-items: center;
-    }
-    .sidebar {
-        width: 100%;
-        border-radius: 8px 8px 0 0;
-        text-align: center;
-        padding: 15px;
-    }
-    .main-content {
-        width: 100%;
-        padding: 15px;
-    }
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
+  .container {
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+  }
+  .sidebar {
+    width: 100%;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    text-align: center;
+    padding: 15px;
+  }
+  .main-content {
+    width: 100%;
+    padding: 15px;
+  }
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
+/* Écrans jusqu'à 768px (smartphones, phablets) */
 @media (max-width: 768px) {
-    .header {
-        font-size: 16px;
-        padding: 8px;
-    }
-    h1.title {
-        font-size: 20px;
-    }
-    .name {
-        font-size: 18px;
-    }
-    .skill {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-    .sidebar, .main-content {
-        padding: 10px;
-    }
-    .container {
-        width: 100%;
-        padding: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-    .footer {
-        font-size: 12px;
-        padding: 8px;
-    }
+  .header {
+    font-size: 16px;
+    padding: 8px;
+  }
+  h1.title {
+    font-size: 20px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .skill {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .sidebar, .main-content {
+    padding: 10px;
+  }
+  .container {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
