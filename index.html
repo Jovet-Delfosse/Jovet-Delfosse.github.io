@@ -9,36 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container">
-    <aside class="sidebar" aria-label="Informations personnelles et compétences">
-      <p class="name">Expédit Jovet-Delfosse</p>
-      <p class="search-area">Zone de mobilité :<br> La Roche-sur-Yon (85), Montaigu (85), Cholet (49), Nantes (44)</p>
-      <p>Permis B</p>
-      <p><a href="mailto:delfosse.expedit@gmail.com">delfosse.expedit@gmail.com</a></p>
-      <p><a href="tel:NUMERO_SUPPRIME">NUMERO_SUPPRIME</a></p>
-      <p><a href="https://www.linkedin.com/in/expedit-jd" target="_blank">LinkedIn</a></p>
-      <h3>Langues</h3>
-      <ul>
-        <li>Français - Langue maternelle</li>
-        <li>Anglais - Niveau intermédiaire (B1-B2)</li>
-      </ul>
-      <h3>Compétences</h3>
-      <div class="skills" role="list">
-        <span class="skill" role="listitem">HTML</span>
-        <span class="skill" role="listitem">CSS</span>
-        <span class="skill" role="listitem">Notions de JavaScript</span>
-        <span class="skill" role="listitem">Notions de PHP-MySQL</span>
-        <span class="skill" role="listitem">Github</span>
-        <span class="skill" role="listitem">WordPress</span>
-        <span class="skill" role="listitem">Photoshop</span>
-        <span class="skill" role="listitem">Illustrator</span>
-      </div>
-      <h3>Portfolio</h3>
-      <p><a href="#" aria-label="Lien vers mon portfolio en ligne">Lien vers mon portfolio en ligne</a></p>
-    </aside>
-    <main class="main-content" aria-label="Contenu principal">
-      <header class="header">
+
+  <header class="header">
         <h1 class="title">Expedit Jovet-Delfosse</h1> 
         <p class="subtitle">En évolution vers le développement web</p>
 
@@ -46,8 +20,14 @@
       <a href="#apropos-title">A propos</a>
       <a href="#formation-title">Formations</a>
       <a href="#experience-title">Expériences</a>
+      <a href="#contact-title">Contact</a>
       </nav>
       </header>
+
+  <div class="container">
+
+    <main class="main-content" aria-label="Contenu principal">
+      
       <section class="section" aria-labelledby="apropos-title">
         <h2 id="apropos-title">À Propos</h2>
         <p>
@@ -60,6 +40,30 @@
           Mon objectif à terme est d'évoluer vers le développement full-stack, tout en conservant ma sensibilité pour le design et les interfaces utilisateur.
         </p>
       </section>
+      <section class="section" aria-labelledby="competences-title">
+        <h2 id="competences-title">Compétences</h2>
+ 
+        <div class="skills" role="list">
+        <span class="skill" role="listitem">HTML</span>
+        <span class="skill" role="listitem">CSS</span>
+        <span class="skill" role="listitem">Notions de JavaScript</span>
+        <span class="skill" role="listitem">Notions de PHP-MySQL</span>
+        <span class="skill" role="listitem">Github</span>
+        <span class="skill" role="listitem">WordPress</span>
+        <span class="skill" role="listitem">Photoshop</span>
+        <span class="skill" role="listitem">Illustrator</span>
+      </div>
+      </section>
+
+      <section class="section" aria-labelledby="langues-title">
+        <h2 id="langues-title">Langues</h2>
+
+        <ul>
+          <li>Français - Langue maternelle</li>
+          <li>Anglais - Niveau intermédiaire (B1-B2)</li>
+        </ul>
+      </section>
+
       <section class="section" aria-labelledby="formation-title">
         <h2 id="formation-title">Diplômes et Formations</h2>
         <p><strong>Infographiste Multimédia</strong> - AFPA Châtellerault (2014 - 2015)</p>
@@ -67,8 +71,16 @@
         <p><strong>MANAA</strong> - MJM Graphic Design, Rennes (2007 - 2008)</p>
         <p><strong>CAP Sellerie</strong> - Lycée Pro Thomas Jean Main, Niort (2001 - 2004)</p>
       </section>
+
       <section class="section" aria-labelledby="experience-title">
         <h2 id="experience-title">Expériences Professionnelles</h2>
+        <article>
+          <h3>Agent horticole - Le Val Fleuri, La Planche (2026)
+          </h3>
+          <ul>
+            <li>Tâche saisonnières liées aux plants saisonniers de printemps, préparation de commandes de produits saisonniers</li>
+          </ul>
+        </article>
         <article>
           <h3>Agent de fabrication et production polyvalent - Ligier Group, Boufféré (2020 - 2022)</h3>
           <ul>
@@ -127,8 +139,38 @@
           <h3>Cariste - SMM, Nueil-les-Aubiers (2014)</h3>
         </article>
       </section>
+      <section class="section contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+
+        <p>Vous souhaitez échanger avec moi?
+          n'hésitez pas à me contacter.
+        </p>
+
+        <p>Email :
+        <a href="mailto:delfosse.expedit@gmail.com">delfosse.expedit@gmail.com</a>
+        </p>
+
+        <p>linkedin : 
+          <a href="https://www.linkedin.com/in/expedit-jd"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Voir mon profil
+          </a>
+        </p>
+
+        <div class="contact-info">
+          <h3>Informations pratiques</h3>
+
+          <p>
+            Mobilité : Nantes, Montaigu, Cholet et La Roche-sur-Yon.
+          </p>
+
+          <p>Permis B.</p>
+        </div>
+      </section>
       <footer class="footer" role="contentinfo">
-        <p>© 2025 Expédit Jovet-Delfosse</p>
+        <p>© 2026 Expédit Jovet-Delfosse</p>
       </footer>
     </main>
   </div>
