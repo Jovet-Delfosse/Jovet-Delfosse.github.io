@@ -1,14 +1,14 @@
 /* Import de la police Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 /* Variables globales */
 :root {
-  --main-bg: #0056b3;       /* Couleur principale (sidebar, header) */
-  --accent-color: #ff8c00;  /* Couleur d'accent (titres, liens hover, etc.) */
-  --light-bg: #f8f9fa;      /* Couleur de fond globale */
-  --white: #ffffff;         /* Blanc */
-  --font-color: #333;       /* Couleur de texte par défaut */
-  --border-radius: 8px;     /* Rayon de bordure */
+  --main-bg: #0056b3; /* Couleur principale (sidebar, header) */
+  --accent-color: #ff8c00; /* Couleur d'accent (titres, liens hover, etc.) */
+  --light-bg: #f8f9fa; /* Couleur de fond globale */
+  --white: #ffffff; /* Blanc */
+  --font-color: #333; /* Couleur de texte par défaut */
+  --border-radius: 8px; /* Rayon de bordure */
   --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--light-bg);
   color: var(--font-color);
   line-height: 1.6;
@@ -85,7 +85,9 @@ body {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
 }
 
 .sidebar a:hover {
@@ -142,8 +144,14 @@ body {
 
 .header .title {
   font-size: 26px;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--white);
+}
+
+.header .subtitle { 
+    font-size: 16px;
+    font-size: 300;
+    margin-top: 8px;
 }
 
 .header .highlight {
@@ -152,7 +160,9 @@ body {
 }
 
 /* Titres généraux */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #222;
   font-weight: 700;
   text-align: center;
@@ -234,7 +244,9 @@ a {
   color: var(--white);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
 }
 
 a:hover {
@@ -256,13 +268,15 @@ a:hover {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     text-align: center;
     padding: 15px;
+    min-height: auto;
+    position: static;
   }
   .main-content {
     width: 100%;
     padding: 15px;
   }
   .skills {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 }
@@ -283,7 +297,8 @@ a:hover {
     font-size: 12px;
     padding: 6px 10px;
   }
-  .sidebar, .main-content {
+  .sidebar,
+  .main-content {
     padding: 10px;
   }
   .container {
@@ -296,9 +311,10 @@ a:hover {
     font-size: 12px;
     padding: 8px;
   }
-  
+
   /* Assurer que le body et html s'étendent correctement pour le scroll */
-  html, body {
+  html,
+  body {
     height: auto;
     overflow-y: auto;
   }
