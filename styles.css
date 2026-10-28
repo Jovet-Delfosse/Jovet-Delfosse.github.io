@@ -3,8 +3,8 @@
 
 /* Variables globales */
 :root {
-  --main-bg: #0056b3; /* Couleur principale (sidebar, header) */
-  --accent-color: #ff8c00; /* Couleur d'accent (titres, liens hover, etc.) */
+  --main-bg: #152238; /* Couleur principale (sidebar, header) */
+  --accent-color: #5ce0c0; /* Couleur d'accent (titres, liens hover, etc.) */
   --light-bg: #f8f9fa; /* Couleur de fond globale */
   --white: #ffffff; /* Blanc */
   --font-color: #333; /* Couleur de texte par défaut */
@@ -152,7 +152,36 @@ body {
     font-size: 16px;
     font-size: 300;
     margin-top: 8px;
+    color: #becbdd;
 }
+
+/* Navigation principale*/
+.site-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+
+    border-top: 1px solid #344256;
+    padding-top: 20px;
+}
+
+.site-nav a {
+    color: #f1f5fa;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--accent-color);
+    border-bottom-color:var(--accent-color) ;
+}
+
 
 .header .highlight {
   color: var(--accent-color);
