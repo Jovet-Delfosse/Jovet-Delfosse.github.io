@@ -61,6 +61,33 @@ body {
   font-size: 0.85em;
 }
 
+/* Grille des savoir-être*/
+.softskills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* Cartes des savoir-être*/
+.softskill-card {
+  background: #24364d;
+  border: 1px solid #48617d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.section .softskill-card h3 {
+  color: var(--accent-color);
+  font-size: 1.05em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.softskill-card p {
+  color: #becbdd;
+  margin-bottom: 0;
+}
+
 /* Cartes des réalisation */
 .realisation-card {
   background: #24364d;
@@ -290,6 +317,10 @@ a:hover {
   .skill {
     font-size: 12px;
     padding: 6px 10px;
+  }
+
+  .softskills-grid {
+    grid-template-columns: 1fr;
   }
 
   .main-content {
