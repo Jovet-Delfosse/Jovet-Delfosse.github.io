@@ -8,8 +8,8 @@
   --border-radius: 8px; /* Rayon de bordure */
   --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-  /* Nouvelle palettes sombre*/
-  --page-bg:#0b2330;
+  /* Nouvelle palette sombre*/
+  --page-bg:#0b1220;
   --surface-bg:#152238;
   --card-bg: #1c2a3e;
   --text-light: #f1f5f5;
@@ -180,7 +180,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #222;
+  color: var(--text-light);
   font-weight: 700;
   text-align: center;
 }
@@ -253,6 +253,40 @@ article p {
 
 article ul {
   margin-left: 20px;
+}
+
+.section[aria-labelledby="experience-title"] article li {
+  color: #becbdd;
+}
+
+/* Grille des compétences pro*/
+.competences-pro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.competence-pro-card {
+  background: #24364d;
+  border: 1px solid #48617d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.section .competence-pro-card h3 {
+  color: var(--accent-color);
+  text-align: left;
+  font-size: 1.05em;
+  margin-bottom: 15px;
+}
+
+.competence-pro-card ul {
+  padding-left: 20px;
+}
+
+.competence-pro-card li {
+  margin-bottom: 10px;
+  color: #becbdd;
 }
 
 /* Pied de page */
@@ -330,9 +364,15 @@ a:hover {
     width: 100%;
     padding: 10px;
   }
+
   .footer {
     font-size: 12px;
     padding: 8px;
+  }
+
+  /* Grille des compétences pro (CV)*/
+  .competences-pro-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Assurer que le body et html s'étendent correctement pour le scroll */
