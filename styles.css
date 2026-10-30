@@ -134,6 +134,13 @@ body {
   font-size: 22px;
 }
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
 .header .title {
   font-size: 26px;
   text-transform: none;
@@ -153,10 +160,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 20px;
-
-    border-top: 1px solid #344256;
-    padding-top: 20px;
 }
 
 .site-nav a {
@@ -193,7 +196,7 @@ h3 {
   margin: 20px 0 30px;
 }
 
-.hero-eyebrown {
+.hero-eyebrow {
   color: var(--accent-color);
   font-size: 0.85rem;
   font-weight: 700;
@@ -258,6 +261,7 @@ h3 {
 
 .hero-button-secondary:hover {
   border-color: var(--accent-color);
+  text-decoration: none;
 }
 
 /* Sections */
@@ -415,13 +419,27 @@ a:hover {
 
 /* Pour écrans jusqu'à 768px (smartphones, phablets) */
 @media (max-width: 768px) {
+
   .header {
     font-size: 16px;
     padding: 8px;
   }
-  h1.title {
-    font-size: 20px;
+
+  .header-inner{
+    flex-direction: column;
+    gap: 15px;
   }
+
+  .header .title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .site-nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
   
   .skill {
     font-size: 12px;
@@ -451,11 +469,19 @@ a:hover {
   }
 
   .hero {
-    padding: 35px 20px;
+    padding: 30px 20px;
   }
 
-  .hero-eyebrown {
+  .hero h2 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+
+  .hero-eyebrow {
     letter-spacing: 1px;
+  }
+
+  .hero-actions {
+    gap: 12px;
   }
 
   .hero-description {
