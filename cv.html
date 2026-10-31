@@ -12,23 +12,32 @@
 
     <body>
         <header class="header">
-            <h1 class="title">Expedit Jovet-Delfosse</h1>
-            <p class="subtitle">CV professionnel</p>
+            <div class="header-inner">
 
-            <nav class="site-nav" aria-label="Navigation principale">
-                <a href="index.html">Portfolio</a>
-                <a href="#parcours-title">Profil</a>
-                <a href="#experience-title">Expériences</a>
-                <a href="#competences-pro-title">Compétences pro</a>
-                <a href="#softskills-cv-title">Savoir-être</a>
-                <a href="#formation-title">Formations</a>
-                <a href="#langues-title">Langues</a>
-                <a href="#contact-cv-title">Contact</a>
-            </nav>
+                <div class="header-identity">
+                  <h1 class="title">Expedit Jovet-Delfosse</h1>
+                  <p class="subtitle">Parcours professionnel</p>
+                </div>
+                <nav class="site-nav" aria-label="Navigation du CV">
+                  <a href="index.html">Portfolio</a>
+                </nav>
         </header>
 
         <div class="container">
             <main class="main-content" >
+
+                <div class="cv-filter">
+                    <label for="cv-section-select">Explorer mon CV</label>
+
+                    <select name="cv-section" id="cv-section-select">
+                        <option value="all">Tout afficher</option>
+                        <option value="profil">Profil professionnel</option>
+                        <option value="experiences">Expériences professionnelles</option>
+                        <option value="competences">Compétences et savoir-être</option>
+                        <option value="formations">Formations et langues</option>
+                        <option value="contact">Contact et mobilité</option>
+                    </select>
+                </div>
                 <section class="section" aria-labelledby="parcours-title">
                   <h2 id="parcours-title">Profil professionnel</h2>
                   <p>
@@ -153,19 +162,7 @@
 
   <div class="softskills-grid">
     <article class="softskill-card">
-      <h3>Rigueur et précision</h3>
-    </article>
-
-    <article class="softskill-card">
       <h3>Organisation</h3>
-    </article>
-
-    <article class="softskill-card">
-      <h3>Esprit d'équipe</h3>
-    </article>
-
-    <article class="softskill-card">
-      <h3>Adaptabilité</h3>
     </article>
 
     <article class="softskill-card">
@@ -174,6 +171,10 @@
 
     <article class="softskill-card">
       <h3>Créativité</h3>
+    </article>
+
+    <article class="softskill-card">
+      <h3>Esprit d'équipe</h3>
     </article>
   </div>
 </section>
