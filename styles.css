@@ -429,8 +429,16 @@ a:hover {
 }
 
 .cv-filter label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-light);
   font-weight: 700;
+}
+
+.cv-filter label svg {
+  color: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .cv-filter select {

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CV professionnel | Expedit Jovet-Delfosse</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="cv.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -27,7 +28,10 @@
             <main class="main-content" >
 
                 <div class="cv-filter">
-                    <label for="cv-section-select">Explorer mon CV</label>
+                    <label for="cv-section-select">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-filter preview-icon"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg>
+                        Explorer mon CV
+                    </label>
 
                     <select name="cv-section" id="cv-section-select">
                         <option value="all">Tout afficher</option>
@@ -38,7 +42,7 @@
                         <option value="contact">Contact et mobilité</option>
                     </select>
                 </div>
-                <section class="section" aria-labelledby="parcours-title">
+                <section class="section" aria-labelledby="parcours-title" data-cv-section="profil">
                   <h2 id="parcours-title">Profil professionnel</h2>
                   <p>
                     Titulaire d'un titre professionnel en infographie multimédia, j'ai acquis une expérience polyvalente dans les domaines du numérique, de la logistique, de la production et de la préparation de commandes.
@@ -48,7 +52,7 @@
                   </p>
                 </section>
 
-                 <section class="section" aria-labelledby="experience-title">
+                 <section class="section" aria-labelledby="experience-title" data-cv-section="experiences">
         <h2 id="experience-title">Expériences Professionnelles</h2>
         <article>
           <h3>Agent horticole - Le Val Fleuri, La Planche (février - mai 2026)
@@ -130,7 +134,7 @@
         </article>
       </section>
 
-      <section class="section" aria-labelledby="competences-pro-title">
+      <section class="section" aria-labelledby="competences-pro-title" data-cv-section="competences">
         <h2 id="competences-pro-title">Compétences professionnelles</h2>
 
         <div class="competences-pro-grid">
@@ -157,7 +161,7 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="softskills-cv-title">
+      <section class="section" aria-labelledby="softskills-cv-title" data-cv-section="competences">
   <h2 id="softskills-cv-title">Savoir-être professionnels</h2>
 
   <div class="softskills-grid">
@@ -179,7 +183,7 @@
   </div>
 </section>
 
-                 <section class="section" aria-labelledby="formation-title">
+                 <section class="section" aria-labelledby="formation-title" data-cv-section="formations">
         <h2 id="formation-title">Diplômes et Formations</h2>
         <p><strong>Infographiste Multimédia</strong> - AFPA Châtellerault (2014 - 2015)</p>
         <p><strong>Animation 3D</strong> - MJM Graphic Design, Rennes (2008 - 2010)</p>
@@ -187,7 +191,7 @@
         <p><strong>CAP Sellerie</strong> - Lycée Pro Thomas Jean Main, Niort (2001 - 2004)</p>
       </section>
 
-      <section class="section" aria-labelledby="langues-title">
+      <section class="section" aria-labelledby="langues-title" data-cv-section="formations">
         <h2 id="langues-title">Langues</h2>
 
         <ul>
@@ -196,7 +200,7 @@
         </ul>
       </section>
 
-      <section class="section contact" aria-labelledby="contact-cv-title">
+      <section class="section contact" aria-labelledby="contact-cv-title" data-cv-section="contact">
         <h2 id="contact-cv-title">Contact et mobilité</h2>
 
         <p>
