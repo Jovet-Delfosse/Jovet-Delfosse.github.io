@@ -31,6 +31,7 @@ body {
 
 /* Conteneur principal */
 .container {
+  width: 95%;
   max-width: 1200px;
   margin: 20px auto 40px;
   background: var(--surface-bg);
@@ -138,13 +139,19 @@ body {
 /* En-tête du contenu principal */
 .header {
   width: min(1200px, 95%);
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   text-align: center;
   background: var(--main-bg);
   color: var(--white);
   padding: 15px;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   font-size: 22px;
+}
+
+/* Continuité entre le header et le contenu */
+.header + .container {
+  margin-top: 0;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .header-inner {
@@ -215,9 +222,9 @@ h3 {
 /* Introductions du portfolio*/
 .hero {
   background: var(--surface-bg);
-  padding: 60px 40px;
+  padding: 35px 40px 45px;
   border-radius: var(--border-radius);
-  margin: 20px 0 30px;
+  margin: 0 0 30px;
 }
 
 .hero-eyebrow {
@@ -243,7 +250,7 @@ h3 {
 .hero-description {
   color: #becbdd;
   font-size: 1.1rem;
-  max-width: 650px;
+  max-width: none;
   margin-bottom: 30px;
 }
 
@@ -304,7 +311,30 @@ h3 {
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-size: 1.3em;
-  /*text-align: left;*/
+}
+
+/* Titres de section avec pictogrammes */
+.section-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+
+
+}
+
+.section-title-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+  transform: translateY(-2.5px);
+}
+
+/* Ajustement de l'icône Compétences */
+#competences-title svg {
+  transform: translateY(0);
 }
 
 .section h3 {
@@ -501,6 +531,15 @@ a:hover {
 
 /* Pour écrans jusqu'à 1024px (tablettes, petits laptops) */
 @media (max-width: 1024px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header .title, .header-identity .title, .header-identity .subtitle {
+    text-align: center;
+  }
+
   .container {
     width: 95%;
   }
@@ -514,18 +553,13 @@ a:hover {
 @media (max-width: 768px) {
 
   .header {
+    width: 100%;
+    margin-top: 0;
     font-size: 16px;
     padding: 8px;
   }
-
-  .header-inner{
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .header-identity .title,
-  .header-identity .subtitle {
-    text-align: center;
+  .cv-header {
+    margin-top: 0;
   }
 
   .header .title {
@@ -536,6 +570,8 @@ a:hover {
   .site-nav {
     justify-content: center;
     gap: 12px;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
 
@@ -581,7 +617,7 @@ a:hover {
   }
 
   .hero {
-    padding: 30px 20px;
+    padding: 20px 20px 30px;
   }
 
   .hero h2 {
