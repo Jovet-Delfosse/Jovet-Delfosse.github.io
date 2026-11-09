@@ -22,6 +22,7 @@
                 <nav class="site-nav" aria-label="Navigation du CV">
                   <a href="index.html">Portfolio</a>
                 </nav>
+            </div>
         </header>
 
         <div class="container">
@@ -29,7 +30,22 @@
 
                 <div class="cv-filter">
                     <label for="cv-section-select">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-filter preview-icon"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        focusable="false"
+                        class="lucide lucide-list-filter">
+                        <path d="M2 5h20"/>
+                        <path d="M6 12h12"/>
+                        <path d="M9 19h6"/>
+                    </svg>
                         Explorer mon CV
                     </label>
 
@@ -43,7 +59,9 @@
                     </select>
                 </div>
                 <section class="section" aria-labelledby="parcours-title" data-cv-section="profil">
-                  <h2 id="parcours-title">Profil professionnel</h2>
+                  <h2 id="parcours-title" class="section-title-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                    Profil professionnel</h2>
                   <p>
                     Titulaire d'un titre professionnel en infographie multimédia, j'ai acquis une expérience polyvalente dans les domaines du numérique, de la logistique, de la production et de la préparation de commandes.
                   </p>
@@ -53,7 +71,9 @@
                 </section>
 
                  <section class="section" aria-labelledby="experience-title" data-cv-section="experiences">
-        <h2 id="experience-title">Expériences Professionnelles</h2>
+        <h2 id="experience-title" class="section-title-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true" focusable="false"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+            Expériences Professionnelles</h2>
         <article>
           <h3>Agent horticole - Le Val Fleuri, La Planche (février - mai 2026)
           </h3>
@@ -135,13 +155,15 @@
       </section>
 
       <section class="section" aria-labelledby="competences-pro-title" data-cv-section="competences">
-        <h2 id="competences-pro-title">Compétences professionnelles</h2>
+        <h2 id="competences-pro-title" class="section-title-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg>
+            Compétences professionnelles</h2>
 
         <div class="competences-pro-grid">
             <div class="competence-pro-card">
         <h3>Numérique et création graphique</h3>
         <ul>
-            <li>Création de supports graphiques et d'illustration avec Photoshop et Illustrator.</li>
+            <li>Création de supports graphiques et d'illustrations à l'aide de Photoshop et Illustrator.</li>
             <li>Retouche, détourage et préparation de visuels pour le web.</li>
             <li>Intégration web : HTML, CSS et gestion de contenus sur CMS.</li>
             <li>Utilisation de Git, GitHub et Visual Studio Code.</li>
@@ -152,7 +174,7 @@
         <div class="competence-pro-card">
         <h3>Organisation et suivi des activités</h3>
         <ul>
-            <li>Organisation des tâches et anticipation des besoins.</li>
+            <li>Planification des tâches et anticipation des besoins.</li>
             <li>Suivi informatisé des commandes et de leur avancement.</li>
             <li>Vérification des commandes et identification des éléments manquants.</li>
             <li>Préparation et traitement des commandes.</li>
@@ -177,7 +199,7 @@
         stroke-linejoin="round"
         aria-hidden="true"
         focusable="false"
-        class="lucide lucide-brain preview-icon"
+        class="lucide lucide-brain"
         >
         <path d="M12 18V5"/>
         <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4"/>
@@ -202,7 +224,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="lucide lucide-lightbulb preview-icon"
+        class="lucide lucide-lightbulb"
         aria-hidden="true"
         focusable="false"
         >
@@ -224,7 +246,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="lucide lucide-users preview-icon"
+        class="lucide lucide-users"
         aria-hidden="true"
         focusable="false"
         >
@@ -240,7 +262,9 @@
 </section>
 
         <section class="section" aria-labelledby="formation-title" data-cv-section="formations">
-        <h2 id="formation-title">Diplômes et Formations</h2>
+        <h2 id="formation-title" class="section-title-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap" aria-hidden="true" focusable="false"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            Diplômes et Formations</h2>
 
         <p><strong>Titre professionnel Infographiste Multimédia</strong> - AFPA Châtellerault (2014 - 2015)</p>
 
@@ -252,7 +276,9 @@
       </section>
 
       <section class="section" aria-labelledby="langues-title" data-cv-section="formations">
-        <h2 id="langues-title">Langues</h2>
+        <h2 id="langues-title" class="section-title-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+            Langues</h2>
 
         <ul>
           <li>Français - Langue maternelle</li>
@@ -261,7 +287,9 @@
       </section>
 
       <section class="section contact" aria-labelledby="contact-cv-title" data-cv-section="contact">
-        <h2 id="contact-cv-title">Contact et mobilité</h2>
+        <h2 id="contact-cv-title" class="section-title-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square" aria-hidden="true" focusable="false"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg>
+            Contact et mobilité</h2>
 
         <p>
             Email :
@@ -281,7 +309,9 @@
         <p>Mobilité : Nantes, Montaigu, Cholet et La Roche-sur-Yon.</p>
         <p>Permis B.</p>
       </section>
-
+      <footer class="footer" role="contentinfo">
+        <p>© 2026 Expédit Jovet-Delfosse</p>
+      </footer>
             </main>
         </div>
     </body>

@@ -408,7 +408,7 @@ article ul {
 
 .section .competence-pro-card h3 {
   color: var(--accent-color);
-  text-align: left;
+  text-align: center;
   font-size: 1.05em;
   margin-bottom: 15px;
 }
@@ -522,9 +522,8 @@ a:hover {
 /* Clic et navigation clavier */
 .cv-filter select:focus,
 .cv-filter select:focus-visible {
-  outline: none;
-  box-shadow: none;
-  border: var(--accent-color);
+  outline: 1px solid var(--accent-color);
+  outline-offset: 1px;
 }
 
 /* ---- Media Queries ---- */
