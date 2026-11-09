@@ -128,6 +128,65 @@ body {
   font-weight: 700;
 }
 
+/* Bouton de l'accordéon */
+.realisations-toggle {
+  display: flex;
+  width: 100%;
+  padding: 14px 18px;
+  background: #24364d;
+  color: var(--text-light);
+  border: 1px solid #48617d;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+/* Chevron de l'accordéon */
+.realisations-toggle svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation à l'ouverture */
+.realisations-accordion.is-open .realisations-toggle svg {
+  transform: rotate(180deg);
+}
+
+.realisations-toggle:hover {
+  background: #2b4059;
+  border-color: var(--accent-color);
+}
+
+.realisations-toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Panneau animé */
+.realisations-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.realisations-content-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.realisations-accordion.is-open .realisations-content {
+  grid-template-rows: 1fr;
+}
+
 /* Contenu principal */
 .main-content {
   width: 100%;

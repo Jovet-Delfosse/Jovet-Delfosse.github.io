@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Expédit Jovet-Delfosse</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="portfolio.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -161,6 +162,19 @@
         </svg>
           Réalisations</h2>
 
+        <div class="realisations-accordion">
+          <button
+            type="button"
+            class="realisations-toggle"
+            aria-expanded="false"
+            aria-controls="realisations-content">
+
+            Afficher les réalisations
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+
+          <div id="realisations-content" class="realisations-content">
+            <div class="realisations-content-inner">
 
         <article class="realisation-card">
           <p class="realisation-date">2018 • Projet graphique non commercialisé</p>
@@ -187,9 +201,10 @@
           <p>Participation à la conception graphique et à l'intégration d'un site vitrine.</p>
         </article>
 
+            </div>
+          </div>
+        </div>
       </section>
-
-
 
       <section class="section contact" aria-labelledby="contact-title">
         <h2 id="contact-title" class="section-title-icon">
