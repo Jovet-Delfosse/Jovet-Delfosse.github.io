@@ -669,6 +669,14 @@ a:hover {
     width: 100%;
   }
 
+  /* Titres longs du CV sur mobile */
+#experience-title span,
+#competences-pro-title span {
+  width: min-content;
+  flex-shrink: 0;
+  text-align: center;
+}
+
   /* Grille des compétences pro (CV)*/
   .competences-pro-grid {
     grid-template-columns: 1fr;
