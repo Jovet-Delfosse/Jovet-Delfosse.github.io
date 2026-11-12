@@ -164,6 +164,7 @@ body {
 .realisations-toggle:hover {
   background: #2b4059;
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .realisations-toggle:focus-visible {
@@ -530,6 +531,18 @@ a:hover {
   border-radius: var(--border-radius);
 }
 
+.cv-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.cv-filter-controls label {
+  white-space: nowwrap;
+  flex-shrink: 0;
+}
+
 .cv-filter label {
   display: inline-flex;
   align-items: center;
@@ -576,6 +589,7 @@ a:hover {
 .cv-filter select:hover {
   background-color: #2b4059;
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Clic et navigation clavier */
@@ -603,6 +617,23 @@ a:hover {
   }
   .main-content {
     padding: 15px;
+  }
+
+  /* Barre de navigation du CV sur tablette */
+  .cv-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cv-filter .cv-filter-controls label {
+    width: auto;
+  }
+  .cv-filter .cv-filter-controls select {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+  .cv-download {
+    text-align: center;
   }
 
 }
@@ -707,5 +738,16 @@ a:hover {
   body {
     height: auto;
     overflow-y: auto;
+  }
+
+  /* Pour écrans jusqu'à 600px (smartphones) */
+  @media (max-width:600px) {
+    .cv-filter-controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .cv-filter .cv-filter-controls select {
+      width: 100%;
+    }
   }
 }

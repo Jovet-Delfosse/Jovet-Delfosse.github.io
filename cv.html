@@ -14,7 +14,6 @@
     <body>
         <header class="header">
             <div class="header-inner">
-
                 <div class="header-identity">
                   <h1 class="title">Expedit Jovet-Delfosse</h1>
                   <p class="subtitle">Parcours professionnel</p>
@@ -27,37 +26,43 @@
 
         <div class="container">
             <main class="main-content" >
-
                 <div class="cv-filter">
-                    <label for="cv-section-select">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                        focusable="false"
-                        class="lucide lucide-list-filter">
-                        <path d="M2 5h20"/>
-                        <path d="M6 12h12"/>
-                        <path d="M9 19h6"/>
-                    </svg>
-                        Explorer mon CV
-                    </label>
+                    <div class="cv-filter-controls">
+                        <label for="cv-section-select">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="24"
+                                 height="24"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true"
+                                 focusable="false"
+                                 class="lucide lucide-list-filter">
+                                <path d="M2 5h20"/>
+                                <path d="M6 12h12"/>
+                                <path d="M9 19h6"/>
+                            </svg>
+                            Explorer mon CV
+                        </label>
 
-                    <select name="cv-section" id="cv-section-select">
-                        <option value="all">Tout afficher</option>
-                        <option value="profil">Profil professionnel</option>
-                        <option value="experiences">Expériences professionnelles</option>
-                        <option value="competences">Compétences et savoir-être</option>
-                        <option value="formations">Formations et langues</option>
-                        <option value="contact">Contact et mobilité</option>
-                    </select>
+                        <select name="cv-section" id="cv-section-select">
+                            <option value="all">Tout afficher</option>
+                            <option value="profil">Profil professionnel</option>
+                            <option value="competences">Compétences et savoir-être</option>
+                            <option value="experiences">Expériences professionnelles</option>
+                            <option value="formations">Formations et langues</option>
+                            <option value="contact">Contact et mobilité</option>
+                        </select>
+                    </div>
+
+                    <a href="documents/CV_Expedit_Jovet-Delfosse.pdf" class="hero-button hero-button-primary cv-download" download>
+                        Télécharger mon CV (PDF)
+                    </a>
                 </div>
+
                 <section class="section" aria-labelledby="parcours-title" data-cv-section="profil">
                   <h2 id="parcours-title" class="section-title-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
@@ -70,91 +75,7 @@
                   </p>
                 </section>
 
-                 <section class="section" aria-labelledby="experience-title" data-cv-section="experiences">
-        <h2 id="experience-title" class="section-title-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true" focusable="false"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-            <span>Expériences Professionnelles</span></h2>
-        <article>
-          <h3>Agent horticole - Le Val Fleuri, La Planche (février - mai 2026)
-          </h3>
-          <ul>
-            <li>Organisation et entretien des serres confiées : rangement espacement des plants et désherbage.</li>
-            <li>Préparation des commandes horticoles : étiquetage anticipé, ramassage et conditionnement des végétaux.</li>
-            <li>Entretien des plants et travaux horticoles : nettoyage des végétaux et repiquage.</li>
-          </ul>
-        </article>
-        <article>
-            <h3>Agent de fabrication polyvalent - Cuisines Design Industries, Saint-Philbert-De-Bouaine (juin - août 2022)</h3>
-            <ul>
-                <li>Assemblage et montage de meubles.</li>
-            </ul>
-        </article>
-        <article>
-          <h3>Agent de fabrication et production polyvalent - Ligier Group, Boufféré (2020 - 2022)</h3>
-          <ul>
-            <li>Montage et assemblage de véhicules automobiles</li>
-            <li>Installation de différents éléments automobiles.</li>
-            <li>Préparation des éléments nécessaires aux postes suivants de la chaîne de production.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Conducteur _ Street Mapping (cartographie mobile) - Geofit (2020)</h3>
-          <ul>
-            <li>Mission ponctuelle d'une semaine.</li>
-            <li>Conduite d'un véhicule équipé d'un système pour des relevés cartographiques.</li>
-            <li>Parcours méthodique des voies routières de plusieurs communes de Vendée, notamment Montréverd et Boufféré, en collaboration avec un géomètre.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Agent de production et logistique polyvalent - Minco, Aigrefeuille sur Maine (2017 - 2020)</h3>
-          <ul>
-            <li>Palettisation de menuiseries, préparation et organisation des palettes selon les commandes clients.</li>
-            <li>Cerclage des palettes et acheminement vers les zones de stockage.</li>
-            <li>Suivi informatique de l'avancement des commandes, vérification des éléments manquants et récupération des pièces dans les différents secteurs de production.</li>
-            <li>Préparation des expéditions : organisation des palettes, manutention et chargement des camions.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Opérateur de production polyvalent - Laboratoires Ponroy, Boufféré (2017)</h3>
-          <ul>
-            <li>Approvisionnement des lignes de production en matières premières, emballages et consommables. </li>
-            <li>Manutention et acheminement des palettes à l'aide d'un transpalette.</li>
-            <li>Récupération, palettisation et filmage des produits finis en vue de leur expédition.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Agent logistique hospitalier - CHU de Nantes (2016 - 2017)</h3>
-          <ul>
-            <li>Préparation de commandes de fournitures médicales et de produits alimentaires destinés aux services hospitaliers.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Stagiaire infographiste multimédia - Tabula Rasa, Parthenay (2015)</h3>
-          <ul>
-            <li>Création graphique d'une carte interactive des Deux-Sèvres destinée à un site et à son intégration web.</li>
-            <li>Détourage, retouche et préparation de visuels pour des sites clients.</li>
-            <li>création de supports graphique avec Photoshop, Illustrator et InDesign.</li>
-            <li>Intégration et mise en page de contenus dans un CMS.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Stagiaire en intégration web - Pro Mat', Cholet (2015)</h3>
-          <ul>
-            <li>Intégration de contenus sur le site internet de l'entreprise.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Cariste - SMM, Nueil-les-Aubiers (2014)</h3>
-          <ul>
-            <li>Approvisionnement des différents postes de travail en matériaux.</li>
-            <li>Manutention, rangement et stockage de marchandises.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="section" aria-labelledby="competences-pro-title" data-cv-section="competences">
+                <section class="section" aria-labelledby="competences-pro-title" data-cv-section="competences">
         <h2 id="competences-pro-title" class="section-title-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg>
             <span>Compétences professionnelles</span></h2>
@@ -261,7 +182,91 @@
   </div>
 </section>
 
-        <section class="section" aria-labelledby="formation-title" data-cv-section="formations">
+                 <section class="section" aria-labelledby="experience-title" data-cv-section="experiences">
+        <h2 id="experience-title" class="section-title-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true" focusable="false"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+            <span>Expériences Professionnelles</span></h2>
+        <article>
+          <h3>Agent horticole - Le Val Fleuri, La Planche (février - mai 2026)
+          </h3>
+          <ul>
+            <li>Organisation et entretien des serres confiées : rangement espacement des plants et désherbage.</li>
+            <li>Préparation des commandes horticoles : étiquetage anticipé, ramassage et conditionnement des végétaux.</li>
+            <li>Entretien des plants et travaux horticoles : nettoyage des végétaux et repiquage.</li>
+          </ul>
+        </article>
+        <article>
+            <h3>Agent de fabrication polyvalent - Cuisines Design Industries, Saint-Philbert-De-Bouaine (juin - août 2022)</h3>
+            <ul>
+                <li>Assemblage et montage de meubles.</li>
+            </ul>
+        </article>
+        <article>
+          <h3>Agent de fabrication et production polyvalent - Ligier Group, Boufféré (2020 - 2022)</h3>
+          <ul>
+            <li>Montage et assemblage de véhicules automobiles</li>
+            <li>Installation de différents éléments automobiles.</li>
+            <li>Préparation des éléments nécessaires aux postes suivants de la chaîne de production.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Conducteur _ Street Mapping (cartographie mobile) - Geofit (2020)</h3>
+          <ul>
+            <li>Mission ponctuelle d'une semaine.</li>
+            <li>Conduite d'un véhicule équipé d'un système pour des relevés cartographiques.</li>
+            <li>Parcours méthodique des voies routières de plusieurs communes de Vendée, notamment Montréverd et Boufféré, en collaboration avec un géomètre.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Agent de production et logistique polyvalent - Minco, Aigrefeuille sur Maine (2017 - 2020)</h3>
+          <ul>
+            <li>Palettisation de menuiseries, préparation et organisation des palettes selon les commandes clients.</li>
+            <li>Cerclage des palettes et acheminement vers les zones de stockage.</li>
+            <li>Suivi informatique de l'avancement des commandes, vérification des éléments manquants et récupération des pièces dans les différents secteurs de production.</li>
+            <li>Préparation des expéditions : organisation des palettes, manutention et chargement des camions.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Opérateur de production polyvalent - Laboratoires Ponroy, Boufféré (2017)</h3>
+          <ul>
+            <li>Approvisionnement des lignes de production en matières premières, emballages et consommables. </li>
+            <li>Manutention et acheminement des palettes à l'aide d'un transpalette.</li>
+            <li>Récupération, palettisation et filmage des produits finis en vue de leur expédition.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Agent logistique hospitalier - CHU de Nantes (2016 - 2017)</h3>
+          <ul>
+            <li>Préparation de commandes de fournitures médicales et de produits alimentaires destinés aux services hospitaliers.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Stagiaire infographiste multimédia - Tabula Rasa, Parthenay (2015)</h3>
+          <ul>
+            <li>Création graphique d'une carte interactive des Deux-Sèvres destinée à un site et à son intégration web.</li>
+            <li>Détourage, retouche et préparation de visuels pour des sites clients.</li>
+            <li>création de supports graphique avec Photoshop, Illustrator et InDesign.</li>
+            <li>Intégration et mise en page de contenus dans un CMS.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Stagiaire en intégration web - Pro Mat', Cholet (2015)</h3>
+          <ul>
+            <li>Intégration de contenus sur le site internet de l'entreprise.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Cariste - SMM, Nueil-les-Aubiers (2014)</h3>
+          <ul>
+            <li>Approvisionnement des différents postes de travail en matériaux.</li>
+            <li>Manutention, rangement et stockage de marchandises.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="formation-title" data-cv-section="formations">
         <h2 id="formation-title" class="section-title-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap" aria-hidden="true" focusable="false"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
             Diplômes et Formations</h2>
