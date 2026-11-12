@@ -378,6 +378,12 @@ h3 {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
+/* Sections du portfolio uniquement */
+.portfolio-page .section {
+  min-height: calc(100svh - 40px);
+  padding-block: 35px;
+  scroll-margin-top: 20px;
+}
 
 .section h2 {
   color: var(--text-light);
@@ -644,6 +650,28 @@ a:hover {
   outline: 1px solid var(--accent-color);
   outline-offset: 1px;
 }
+
+/* Transition entre les sections du portfolio */
+.page-transition-overlay {
+  position: fixed;
+  inset:0;
+  z-index: 9999;
+  background: var(--page-bg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+
+.page-transition-overlay.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-overlay {
+    transition: none;
+  }
+}
+
 
 /* ---- Media Queries ---- */
 
