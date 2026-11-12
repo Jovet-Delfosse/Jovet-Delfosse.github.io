@@ -52,10 +52,10 @@ body {
 }
 
 .skill {
-  background: #24364d;
-  color: var(--text-light);
-  padding: 10px 15px;
-  border: 1px solid #344b63;
+  background: var(--surface-bg);
+  color: var(--accent-color);
+  padding: 5px 10px;
+  border: 1px solid #48617d;
   border-radius: 6px;
   font-weight: 500;
   text-align: center;
@@ -126,6 +126,20 @@ body {
   color: var(--accent-color);
   font-size: 0.85em;
   font-weight: 700;
+}
+
+/* Sous-titre des cartes de projets web */
+.projet-card h4 {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 14px 0 6px;
+}
+
+/* Technologies des projets web */
+.projet-technologies {
+  justify-content: flex-start;
 }
 
 /* Bouton de l'accordéon */
@@ -698,7 +712,7 @@ a:hover {
 
   .skill {
     font-size: 12px;
-    padding: 6px 10px;
+    padding: 5px 10px;
   }
 
   .softskills-grid {
@@ -763,6 +777,11 @@ a:hover {
 
   .hero-description {
     font-size: 1rem;
+  }
+
+  /* Technologies des projets sur mobiles */
+  .projet-technologies {
+    justify-content: center;
   }
 
   /* Assurer que le body et html s'étendent correctement pour le scroll */
