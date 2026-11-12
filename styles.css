@@ -422,6 +422,35 @@ section[aria-labelledby="experience-title"] h3 {
   margin-bottom: 10px;
 }
 
+/* Test d'une carte d'experience plus structurée */
+.experience-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+.experience-card .experience-employer {
+  color: #e0e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.experience-period {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.experience-card ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.experience-card li:last-child {
+  margin-bottom: 0;
+}
+
+
 /* Cartes des expériences*/
 section[aria-labelledby="experience-title"] article {
   background: #24364d;
@@ -429,6 +458,9 @@ section[aria-labelledby="experience-title"] article {
   border-radius: 6px;
   padding: 20px;
   margin-bottom: 15px;
+}
+section[aria-labelledby="experience-title"] .experience-card h3 {
+  margin-bottom: 0;
 }
 
 /* Articles pour les expériences */
@@ -539,7 +571,7 @@ a:hover {
 }
 
 .cv-filter-controls label {
-  white-space: nowwrap;
+  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -740,7 +772,7 @@ a:hover {
     overflow-y: auto;
   }
 
-  /* Pour écrans jusqu'à 600px (smartphones) */
+  /* Pour écrans jusqu'à 600px */
   @media (max-width:600px) {
     .cv-filter-controls {
       flex-direction: column;
@@ -748,6 +780,21 @@ a:hover {
     }
     .cv-filter .cv-filter-controls select {
       width: 100%;
+    }
+  }
+
+  /* Caryes d'experience sur smartphone */
+  @media (max-width: 480px) {
+    .experience-card .experience-card-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      margin-bottom: 4px;
+    }
+    .experience-card ul {
+      margin-left: 0;
+      padding-left: 18px;
     }
   }
 }
