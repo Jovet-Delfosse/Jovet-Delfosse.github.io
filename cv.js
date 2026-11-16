@@ -4,7 +4,7 @@ const cvSections = document.querySelectorAll("[data-cv-section]");
 
 // Préférences d'accessibilité
 const prefersReducedMotion = window.matchMedia(
-    "prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)"
 ).matches;
 
 let transitionTimeout;
@@ -19,7 +19,7 @@ cvSelect.addEventListener("change", () => {
         section.classList.remove("cv-fade-out", "cv-fade-in");
     });
 
-    // Apliquer le filtre et faire apparaître les sections
+    // Appliquer le filtre et faire apparaître les sections
     const showSelectedSections = () => {
         cvSections.forEach((section) => {
             const shouldShow =
@@ -54,7 +54,7 @@ cvSelect.addEventListener("change", () => {
     transitionTimeout = setTimeout(showSelectedSections, 200);
 });
 
-// Afficher l& flèche uniquement lorsque le défilement est utile
+// Afficher la flèche uniquement lorsque le défilement est utile
 const cvBackToTop = document.querySelector(".cv-back-to-top");
 
 function updateCvBackToTop() {

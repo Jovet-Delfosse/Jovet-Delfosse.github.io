@@ -125,7 +125,7 @@ if (
     !event.ctrlKey &&
     !event.metaKey &&
     !event.altKey &&
-    !["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)
+    !["INPUT", "TEXTAREA", "SELECT", "BUTTON"].includes(event.target.tagName)
 ) {
     restoreSectionsWithTransition();
 }
