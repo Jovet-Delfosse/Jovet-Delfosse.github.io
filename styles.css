@@ -283,6 +283,12 @@ body {
     text-decoration: none;
 }
 
+/* Lien actif dans la navigation du portfolio */
+.portfolio-page .site-nav a.is-active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
 
 /* Titres généraux */
 h1,

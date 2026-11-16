@@ -20,6 +20,8 @@ let isNavigating = false;
 // Sections du portfolio
 const portfolioSections = document.querySelectorAll(".portfolio-page .hero, .portfolio-page .section");
 
+const navLinks = document.querySelectorAll(".site-nav a");
+
 let focusedSection = null;
 let isSectionFocused = false;
 
@@ -40,6 +42,19 @@ function focusSection(target) {
     focusedSection = section;
     isSectionFocused = true;
 
+    // Mettre en évidence le lien correspondant
+    navLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${target.id}`;
+
+        link.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+            link.setAttribute("aria-current", "location");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+
     return section;
 }
 
@@ -58,6 +73,12 @@ function restoreSections() {
     const offset = focusedSection.getBoundingClientRect().top - previousTop;
 
     window.scrollBy({ top: offset, behavior: "instant"});
+
+    // Retirer l'état actif des liens
+    navLinks.forEach((link) => {
+        link.classList.remove("is-active");
+        link.removeAttribute("aria-current");
+    });
 
     focusedSection = null;
     isSectionFocused = false;
@@ -149,5 +170,36 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
             transitionOverlay.classList.add("is-visible");
             setTimeout(navigate, 250);
         }
+    });
+});
+
+// Gérer nous-même la position de défilement dans l'historique
+history.scrollRestoration = "manual";
+
+// Boutons Précédent et Suivant du navigateur
+window.addEventListener("popstate", () => {
+    const hash = window.location.hash;
+    const target = hash
+        ? document.getElementById(decodeURIComponent(hash.slice(1)))
+        : null;
+
+    // Retour à la page complète
+    if (!target) {
+        restoreSections();
+        window.scrollTo({ top: 0, behavior: "instant" });
+        return;
+    }
+
+    // Afficher la section correspondant à l'URL
+    const section = focusSection(target);
+
+    // Repositionner la page après la modification de l'affichage
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    requestAnimationFrame(() => {
+        section.scrollIntoView({
+            behavior: "instant",
+            block: "start",
+        });
     });
 });
