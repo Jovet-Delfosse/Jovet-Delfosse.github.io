@@ -32,6 +32,9 @@ cvSelect.addEventListener("change", () => {
                 section.classList.add("cv-fade-in");
             }
         });
+
+        // Actualiser la visibilité de la flèche
+        requestAnimationFrame(updateCvBackToTop);
     };
 
     // Sans animation si l'utilisateur préfère réduire les mouvements
@@ -50,3 +53,20 @@ cvSelect.addEventListener("change", () => {
     // Changer les sections après leur sélection
     transitionTimeout = setTimeout(showSelectedSections, 200);
 });
+
+// Afficher l& flèche uniquement lorsque le défilement est utile
+const cvBackToTop = document.querySelector(".cv-back-to-top");
+
+function updateCvBackToTop() {
+    const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+    const shouldShow =
+    scrollableHeight > 300 && window.scrollY > 200;
+
+    cvBackToTop.classList.toggle("is-visible", shouldShow);
+}
+window.addEventListener("scroll", updateCvBackToTop, { passive: true });
+window.addEventListener("resize", updateCvBackToTop);
+
+updateCvBackToTop();
