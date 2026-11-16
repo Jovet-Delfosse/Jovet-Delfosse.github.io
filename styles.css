@@ -378,11 +378,14 @@ h3 {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
-/* Sections du portfolio uniquement */
+/* Sections du porrtfolio uniquement */
 .portfolio-page .section {
-  min-height: calc(100svh - 40px);
-  padding-block: 35px;
   scroll-margin-top: 20px;
+}
+/* Masquer les autres sections lors d'une navigation ciblée */
+.portfolio-page.is-section-focused .section:not(.is-current-section),
+.portfolio-page.is-section-focused .hero:not(.is-current-section) {
+  display: none;
 }
 
 .section h2 {
@@ -649,6 +652,32 @@ a:hover {
 .cv-filter select:focus-visible {
   outline: 1px solid var(--accent-color);
   outline-offset: 1px;
+}
+
+/* Transition des sections du CV */
+[data-cv-section] {
+  transition: opacity 200ms ease;
+}
+[data-cv-section].cv-fade-out {
+  opacity: 0;
+}
+[data-cv-section].cv-fade-in {
+  animation: cv-fade-in 250ms ease both;
+}
+
+@keyframes cv-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-cv-section] {
+    transition: none;
+    animation: none;
+  }
 }
 
 /* Transition entre les sections du portfolio */
